@@ -1,0 +1,18 @@
+{
+  "name": "ooba-e2e",
+  "version": "1.0.0",
+  "description": "Playwright E2E tests for ooba.co.za",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:chromium": "playwright test --project=chromium",
+    "test:mobile": "playwright test --project=mobile-chrome --project=mobile-safari",
+    "test:report": "playwright show-report",
+    "test:debug": "PWDEBUG=1 playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "typescript": "^5.4.5"
+  }
+}
