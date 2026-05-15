@@ -21,8 +21,9 @@ test.describe('Homepage', () => {
     await expect(page.locator('a.btn.btn-default.btn-lg', { hasText: /Apply Now/i })).toBeVisible();
   });
 
-  test('phone number is displayed in the header', async ({ page }) => {
+  test('phone number is displayed in the header', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'Phone number hidden in mobile menu');
     await expect(page.locator('text=0860 00 66 22').first()).toBeVisible();
   });
-  
+
 });
