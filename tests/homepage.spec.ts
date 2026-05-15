@@ -26,4 +26,10 @@ test.describe('Homepage', () => {
     await expect(page.locator('text=0860 00 66 22').first()).toBeVisible();
   });
 
+  test('bank partner logos section is present', async ({ page }) => {
+    // The section heading
+    await expect(
+      page.locator('text=/work with all the leading banks/i'),
+    ).toBeVisible();
+  });
 });
