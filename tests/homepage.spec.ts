@@ -35,10 +35,10 @@ test.describe('Homepage', () => {
 
   test('3-step process section is visible', async ({ page }) => {
     await expect(page.locator('text=/3 easy steps/i')).toBeVisible();
-    await expect(page.locator('text=/Get pre-approved/i').first()).toBeVisible();
-    await expect(page.locator('text=/Find a home/i')).toBeVisible();
-    await expect(page.locator('text=/Get the best bond/i')).toBeVisible();
+    await expect(page.getByRole('heading', { name: '1. Get pre-approved' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: '2. Find a home' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: '3. Get the best bond' })).toBeVisible();
   });
 
-  
+
 });
