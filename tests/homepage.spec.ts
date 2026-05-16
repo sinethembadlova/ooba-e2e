@@ -40,5 +40,9 @@ test.describe('Homepage', () => {
     await expect(page.getByRole('heading', { name: '3. Get the best bond' })).toBeVisible();
   });
 
-
+  test('customer testimonials section is visible', async ({ page }) => {
+    await expect(page.locator('text=/Ranked #1/i')).toBeVisible();
+    await expect(page.locator('text=/4.86/i')).toBeVisible();
+  });
+  
 });
