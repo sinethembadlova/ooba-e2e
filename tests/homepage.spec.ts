@@ -44,5 +44,15 @@ test.describe('Homepage', () => {
     await expect(page.locator('text=/Ranked #1/i')).toBeVisible();
     await expect(page.locator('text=/4.86/i')).toBeVisible();
   });
+
+  test('FAQ section expands on click', async ({ page }) => {
+    const faq = page.locator('text=/Can I get a home loan without a deposit/i');
+    await expect(faq).toBeVisible();
+    await faq.click();
+    await expect(
+      page.locator('text=/100% loans/i'),
+    ).toBeVisible();
+  });
+ 
   
 });
