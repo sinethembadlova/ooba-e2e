@@ -32,4 +32,13 @@ test.describe('Homepage', () => {
       page.locator('text=/work with all the leading banks/i'),
     ).toBeVisible();
   });
+
+  test('3-step process section is visible', async ({ page }) => {
+    await expect(page.locator('text=/3 easy steps/i')).toBeVisible();
+    await expect(page.locator('text=/Get pre-approved/i').first()).toBeVisible();
+    await expect(page.locator('text=/Find a home/i')).toBeVisible();
+    await expect(page.locator('text=/Get the best bond/i')).toBeVisible();
+  });
+
+  
 });
