@@ -54,5 +54,10 @@ test.describe('Homepage', () => {
     ).toBeVisible();
   });
  
+  test('"Speak to an expert" form section is present', async ({ page }) => {
+    await expect(page.locator('text=/Speak to an expert/i')).toBeVisible();
+    await expect(page.locator('input[name*="first"], input[placeholder*="First"]').first()).toBeVisible();
+  });
+
   
 });
